@@ -1,5 +1,7 @@
 # bookshelf-committed-plugin
 
+## npm install bookshelf-committed-plugin
+
 A plugin for Bookshelf ORM to fire the `committed` event on `saved` and transaction completed successfully.
 
 `saved`: `insert` or `update`
@@ -10,7 +12,7 @@ The bookshelf `created`, `saved`, `updated` events actually fire before the tran
 
 ## Example and definition
 
-```
+```js
 initialize(){
   this.on('committed', (model, attrs, options, previousAttributes) => {
     // do something
@@ -23,6 +25,12 @@ model: Bookshelf.Model,
 attrs: Object, // plain object of attributes that will be updated
 options: Object, // options passed to save, including method which is automatically added if not originally in save options
 previousAttributes: Object, // plain object of attributes prior to this save, (not neccessarily the same as prior to the transaction)
+```
+
+```js
+Bookshelf.plugin(require('bookshelf-committed-plugin'));
+```
+
 
 ## FAQ
 

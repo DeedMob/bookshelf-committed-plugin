@@ -11,7 +11,7 @@
     "url": "git+https://github.com/DeedMob/bookshelf-commits-plugin.git"
   },
   "peerDependencies": {
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.4"
   },
   "author": "David Furlong <david@deedmob.com>",
   "license": "MIT",
