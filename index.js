@@ -1,4 +1,4 @@
-import _ from 'lodash';
+const _ = require('lodash');
 
 // Committed Plugin
 // Emits the 'committed' event on `update` or `insert` when the save transaction completes for all models
