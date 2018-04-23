@@ -23,7 +23,7 @@ module.exports = function(Bookshelf) {
       if(options.method === 'insert' || options.method === 'update'){
         if (options.transacting) {
           options.transacting.__subscribers.push(() => {
-            this.triggerThen('committed', this, attrs, options, previousAttributes);
+            this.triggerThen('committed', this.clone(), attrs, options, previousAttributes);
           });
         } else {
           save.tap(model => model.triggerThen('committed', model.clone(), attrs, options, previousAttributes));
