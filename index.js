@@ -26,7 +26,7 @@ module.exports = function(Bookshelf) {
             this.triggerThen('committed', this, attrs, options, previousAttributes);
           });
         } else {
-          save.tap(model => model.triggerThen('committed', model, attrs, options, previousAttributes));
+          save.tap(model => model.triggerThen('committed', model.clone(), attrs, options, previousAttributes));
         }
       }
 

@@ -1,6 +1,6 @@
 {
   "name": "bookshelf-committed-plugin",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "A plugin for Bookshelf ORM to fire the `committed` event when a model is `saved` inside a transaction and after the transaction has successfully committed",
   "main": "index.js",
   "scripts": {
